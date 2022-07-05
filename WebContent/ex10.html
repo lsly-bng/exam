@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+
+<body>
+
+	<h1>자바스크립</h1>
+	<h2>함수(function)</h2>
+
+</body>
+
+<script type="text/javascript">
+	//(2)->시스템에 입력된 정보를 덮어씌운다
+	var test = function() {
+		console.log("test 익명함수");
+	}
+	//(1)->우선순위로 시스템에 입력되고
+	function test() {
+		console.log("test 함수");
+	}
+	//(3)->최신으로 업데이트된 test를 출력한다
+	test();
+</script>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+
+<body>
+
+	<h1>자바스크립</h1>
+	<h2>배열+객체-->리스트</h2>
+
+</body>
+
+<script type="text/javascript">
+	var personList = [];
+
+	// 방식(1) --> person01 = {name: "__", hp: "__"}; (:) 기호 주의
+	var person01 = {
+		name : "정우성",
+		hp : "010-1111-1111"
+	};
+
+	// 방식(2) --> person02 = {}; person02.name = "__"; (=) 기호 주의
+	var person02 = {};
+	person02.name = "유재석";
+	person02.hp = "010-2222-2222";
+
+	// 방식(3) --> 방식(1) & 방식(2) 혼합 (:, =) 기호 주의
+	var person03 = {
+		name : "이효리"
+	};
+	person03.hp = "010-3333-3333";
+
+	// 출력
+	console.log(person01);
+	console.log(person02);
+	console.log(person03);
+
+	// 배열에 담기
+	personList[0] = person01;
+	personList[1] = person02;
+	personList.push(person03); //push로 맨 뒤에 담기
+
+	// for문으로 배열 값 하나씩 출력하기
+	for (var i = 0; i < personList.length; i++) {
+		console.log(personList[i].name);
+	}
+
+	//배열 값 한눈에 출력하기
+	console.log(personList);
+</script>
+
+</html>

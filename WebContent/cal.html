@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calculator</title>
+<link href="./cal.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+	<div id="cal">
+		<input id="display" type="text"> <br>
+
+		<div id="btnArea">
+			<!-- 계산기 버튼 -->
+			<button id="nine" type="button" value="9">9</button>
+			<button id="eight" type="button" value="8">8</button>
+			<button id="seven" type="button" value="7">7</button>
+			<button id="divide" type="button" value="/">÷</button>
+			<br>
+			<button id="six" type="button" value="6">6</button>
+			<button id="five" type="button" value="5">5</button>
+			<button id="four" type="button" value="4">4</button>
+			<button id="multiply" type="button" value="*">*</button>
+			<br>
+			<button id="three" type="button" value="3">3</button>
+			<button id="two" type="button" value="2">2</button>
+			<button id="one" type="button" value="1">1</button>
+			<button id="plus" type="button" value="+">+</button>
+			<br>
+			<button id="zero" type="button" value="0">0</button>
+			<button id="clear" type="button" value="">C</button>
+			<button id="equals" type="button" value="=">=</button>
+			<button id="minus" type="button" value="-">-</button>
+			<br>
+		</div>
+	</div>
+
+</body>
+
+<script type="text/javascript">
+	window.onload = function() {
+		// html (DOM) -> JS 객체화
+		var display = document.getElementById("display");
+
+		var nine = document.getElementById("nine");
+		var eight = document.getElementById("eight");
+		var seven = document.getElementById("seven");
+		var six = document.getElementById("six");
+		var five = document.getElementById("five");
+		var four = document.getElementById("four");
+		var three = document.getElementById("three");
+		var two = document.getElementById("two");
+		var one = document.getElementById("one");
+		var zero = document.getElementById("zero");
+
+		var divide = document.getElementById("divide");
+		var multiply = document.getElementById("multiply");
+		var plus = document.getElementById("plus");
+		var clear = document.getElementById("clear");
+		var equals = document.getElementById("equals");
+		var minus = document.getElementById("minus");
+
+		// ONCLICK --> 계산 위해 
+		var str = "";
+
+		nine.onclick = function() {
+			str += 9;
+			display.value = str;
+		};
+
+		eight.onclick = function() {
+			str += 8;
+			display.value = str;
+		};
+		seven.onclick = function() {
+			str += 7;
+			display.value = str;
+		};
+
+		six.onclick = function() {
+			str += 6;
+			display.value = str;
+		};
+
+		five.onclick = function() {
+			str += 5;
+			display.value = str;
+		};
+
+		four.onclick = function() {
+			str += 4;
+			display.value = str;
+		};
+
+		three.onclick = function() {
+			str += 3;
+			display.value = str;
+		};
+
+		two.onclick = function() {
+			str += 2;
+			display.value = str;
+		};
+
+		one.onclick = function() {
+			str += 1;
+			display.value = str;
+		};
+
+		zero.onclick = function() {
+			str += 0;
+			display.value = str;
+		};
+
+		divide.onclick = function() {
+			str += "/";
+			display.value = str;
+		};
+
+		multiply.onclick = function() {
+			str += "*";
+			display.value = str;
+		};
+
+		plus.onclick = function() {
+			str += "+";
+			display.value = str;
+		};
+
+		clear.onclick = function() {
+			str += "";
+			display.value = str;
+		};
+
+		equals.onclick = function() {
+			if (str.includes("/")) {
+				var data = str.split("/");
+				str = parseInt(data[0]) / parseInt(data[1])
+			} else if (str.includes("*")) {
+				var data = str.split("*");
+				str = parseInt(data[0]) * parseInt(data[1])
+			} else if (str.includes("+")) {
+				var data = str.split("+");
+				str = parseInt(data[0]) + parseInt(data[1])
+			} else if (str.includes("-")) {
+				var data = str.split("-");
+				str = parseInt(data[0]) - parseInt(data[1])
+			}
+
+			display.value = str;
+			str = ""; // 값을 초기화(다음계산 위해)
+
+		};
+
+		minus.onclick = function() {
+			str += "-";
+			display.value = str;
+		};
+	};
+</script>
+
+</html>

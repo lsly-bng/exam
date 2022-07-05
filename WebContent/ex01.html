@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<!-- 
+JavaScript can "display" data in different ways:
+
+Writing into an HTML element, using // innerHTML.
+Writing into the HTML output using // document.write().
+Writing into an alert box, using // window.alert().
+Writing into the browser console, using // console.log().
+ -->
+<body>
+
+	<h1>자바스크립</h1>
+	<h2>기본 데이터 타입</h2>
+
+</body>
+
+<script type="text/javascript">
+	/*콘솔설명 --> println 개념과 비슷함 */
+	console.log("타입확인");
+
+	/* 기본자료형은 number string boolean 3가지가 있다 */
+	console.log(typeof 1);			//number
+	console.log(typeof 1.5);    	//number
+	console.log(typeof '한');		//string
+	console.log(typeof "안녕하세요");	//string
+	console.log(typeof (6>5));		//boolean
+	console.log(typeof (6<5));		//boolean
+	
+</script>
+
+<script type="text/javascript">
+
+	console.log("number 형 확인");
+	
+	/* [연산자: '+', '-', '*', '/', '%'] */
+	console.log(13+5);		//18
+	console.log(13-5);		//8
+	console.log(13*5);		//65
+	console.log(13/5);		//2.6
+	console.log(13%5);		//3
+	
+
+	console.log(13+5.2);    //18.2
+	console.log(5+3*2);     //11
+	console.log((5+3)*2)	//16
+	
+</script>
+
+<script type="text/javascript">
+	
+	console.log("string 형 확인");
+	
+	/* [이스케이프문자: \t (tab), \n (nextLine), \' ('), \" ("), \\ (\)} ] */
+	console.log("동해물과 백두산이");
+	console.log('동해물과 백두산이');
+	
+	console.log("동해물과 '백두산'이"); //쌍따움표로 감싸고 -> 따옴표 쓰면 백슬래시 안써도 표현 가능
+	console.log('동해물과 "백두산"이'); //따움표로 감싸고 -> 쌍따옴표 쓰면 백슬래시 안써도 표현 가능
+	
+	console.log("동해물과 \"백두산\"이"); //백슬래시 사용해야 하는 경우
+	console.log('동해물과 \'백두산\'이'); //백슬래시 사용해야 하는 경우
+	
+	console.log("동해물과 \n백두산이"); //줄한칸
+	console.log("동해물과 \t백두산이"); //탭 효과
+	
+	console.log("동해물과" + "1234" + "백두산이"); //변수 삽입할 경우 자바와 똑같이 + 사용하면 됨
+	
+</script>
+
+<script type="text/javascript">
+
+	console.log("boolean 형 확인");
+	
+	console.log(52 > 273);		//false
+	console.log(52 < 273);		//true
+
+</script>
+</html>

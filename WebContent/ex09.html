@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+
+<body>
+
+	<h1>자바스크립</h1>
+	<h2>함수(function)</h2>
+
+</body>
+
+<script type="text/javascript">
+	var no = 4;
+	var str = "안녕하세요";
+
+	//이름있는 함수(기명함수 || 선언적 함수) -> 정의부분부터 조사된다(사용부분의 위치를 변경해서 실험)
+	//자바스크립트는 전체 코딩 중 <함수 function> 내용 파악 후, 실행한다 (코드를 두번 돌린다고 생각하면 된다) 
+	//정의
+	function testA() {
+		console.log("testA 함수입니다.");
+	}
+
+	//사용하는법 [testA->function명,()->실행]
+	testA();
+	///////////////////////////////////////////////////////////////////////////
+
+	//(만들고 바로 사용)  
+	//이름없는 함수(익명함수)->실제로 이름이 없으면 사용할수 없다.  변수에 할당해서 변수이름으로 사용
+	//function이 정의 되어 있지 않기 때문에, 어디에 사용해야하는지 모름, 따라서 사용 불가하다는 로직
+	var testB = function() {
+		console.log("익명함수입니다.");
+	}
+
+	//사용하는법 [testB->var명, ()->실행]
+	//변수에 function이 대입되고 난후에 사용해야함(순서가 중요)
+	testB(); //순서 변경해서 실험하면  <Uncaught TypeError: testB is not a function> 뜸
+</script>
+
+</html>
